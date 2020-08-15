@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <section class="timer">
+        <div class="h">00</div>
+        <div class="m">00</div>
+        <div class="s">00</div>
+    </section>
+</body>
+<script>
+    let h=document.getElementsByClassName("h")[0];
+    let h=document.querySelectorAll("m")[0];
+    let h=document.getElementsByClassName("s")[0];
+
+    let sCounter=0;
+    let mCounter=0;
+    let hCounter=0;
+
+    setInterval(function () {
+        if(sCounter<60)
+        {
+            sCounter++;
+        }
+        else
+        {
+            sCounter=0;
+            mCounter++;
+        }
+        if(mCounter===60)
+        {
+            mCounter=0;
+            hCounter++;
+        }
+        if(hCounter===24)
+        {
+            hCounter=0;
+        }
+        h.innerText=hCounter;
+        m.innerText=mCounter;
+        s.innerText=sCounter;
+    },1000)
+</script>
+</html>
